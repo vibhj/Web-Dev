@@ -1,0 +1,990 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta charset="UTF-8">
+    <title>AAKRITI | HOME</title>
+    <link href="https://fonts.googleapis.com/css?family=Aclonica|Audiowide|Montserrat+Alternates|Odibee+Sans|Orbitron|Righteous&display=swap" rel="stylesheet">
+    <link rel="icon" href="css/img/logo.svg">
+    <script src="jquery-3.4.1.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/preloader.css">
+    <style type="text/css">
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            width: 100%;
+            height: 100%;
+            overflow-x: hidden;
+        }
+
+        ::-webkit-scrollbar {
+            width: 0px;
+        }
+
+        #navbar {
+            width: 100%;
+            height: 75px;
+            background-color: #111;
+            background-image: linear-gradient(60deg, dodgerblue, darkcyan);
+            display: flex;
+            flex-direction: row-reverse;
+            position: fixed;
+            justify-content: space-between;
+            align-items: center;
+            color: white;
+            font-family: fantasy;
+            text-transform: uppercase;
+            letter-spacing: 5px;
+            top: 0;
+            left: 0;
+            font-size: 1.75em;
+            transition: 0.75s ease;
+            box-shadow: 0px 0px 50px 0px black;
+            z-index: 999999;
+            padding: 0px 20px 0px 20px;
+        }
+
+        #navbar a {
+            text-decoration: none;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            transition: 0.5s ease;
+            color: white;
+        }
+
+        #navbar a:hover {
+            text-decoration-color: dodgerblue;
+            color: white;
+            transform: scale(1.5);
+        }
+        
+        #navbar #cogs{
+            color: #999;
+            animation: cogs 0.5s infinite ease;
+        }
+        
+        @keyframes cogs{
+            0%{color: #999;}
+            100%{color: #fff;}
+        }
+
+        .nav-logo img {
+            width: 70px;
+            height: 70px;
+        }
+
+        #content {
+            display: block;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            transition: 1s ease;
+            top: 0;
+            left: 0;
+            right: 0;
+        }
+
+        #page1 {
+            display: block;
+            width: 100%;
+            height: 100vh;
+            background-color: darkcyan;
+            background-image: url("css/img/Backdrops/code-page1-home.jpg");
+            background-size: cover;
+            background-attachment: fixed;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #page1::before {
+            content: '';
+            width: 100%;
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            height: 200px;
+            background-color: dodgerblue;
+            clip-path: polygon(50% 65%, 100% 20%, 100% 100%, 0 100%, 0 20%);
+            z-index: 99;
+            opacity: 1;
+        }
+
+        #page1::after {
+            content: '';
+            width: 100%;
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            height: 200px;
+            background-color: rgb(0,110,200);
+            clip-path: polygon(50% 58%, 100% 20%, 100% 100%, 0 100%, 0 20%);
+            z-index: 9;
+            opacity: 1;
+        }
+
+        #page1-txt {
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.9);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            border-radius: 10px;
+            border: 3px solid #000;
+            box-shadow: inset 0px 5px 20px #000;
+            padding: 80px 25px 150px 25px;
+            color: #fff;
+        }
+        
+        #page1-txt-1{
+            font-family: 'Orbitron';
+            letter-spacing: 3px;
+            font-size: 3em;
+            text-shadow: 1px 2px 3px #000;
+            margin-top: 40px;
+        }
+        #page1-txt-2{
+            font-family: 'orbitron';
+            font-size: 1.5em;
+            letter-spacing: 2px;
+            margin-bottom: 40px;
+            text-shadow: 1px 2px 3px #000;
+        }
+        #page1-txt-3 p{
+            font-family: 'Odibee Sans';
+            color: #fff;
+            font-size: 1.5em;
+            text-shadow: 1px 2px 3px #000;
+            margin-bottom: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #page1-txt-3{
+            width: 50%;
+            height: auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        @media only screen and (min-width:600px){
+            #page1-txt-3{
+                width: 600px;
+            }
+        }
+        #page1-txt-4 p{
+            color: #fff;
+            font-family: arial;
+            font-size: 1.1em;
+            text-align:center;
+            letter-spacing: 1px;
+            margin-bottom: 30px;
+        }
+        #page1-txt-4{
+            width: 95%;
+            height: auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+        @media only screen and (min-width:800px){
+            #page1-txt-4{
+                width: 650px;
+            }
+        }
+
+        #page2 {
+            display: block;
+            width: 100%;
+            height: 100vh;
+            /*height: auto;*/
+            background-color:darkorange;
+            background-image: linear-gradient(to top, darkcyan, dodgerblue);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+        
+        
+
+        #menu {
+            width: 400px;
+            height: 100vh;
+            position: fixed;
+            display: block;
+            background-color: #000;
+            top: 0;
+            bottom: 0;
+            right: -460px;
+            display: flex;
+            align-items: center;
+            transform: skewX(8deg);
+            transition: 0.75s ease;
+            box-shadow: 0px 0px 50px 2px #000;
+            border-left: 1px solid darkcyan;
+        }
+
+        #menu span {
+            padding-top: 1cm;
+            height: 80%;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: space-around;
+            transform: skewX(-8deg);
+            padding-bottom: 2cm;
+            font-family: 'Odibee Sans';
+            margin-top: 65px;
+        }
+
+        #menu span a {
+            color: white;
+            list-style: none;
+            padding-left: 75px;
+            cursor: pointer;
+            text-decoration: none;
+            font-weight: 700;
+            letter-spacing: 5px;
+            font-size: 2em;
+            text-transform: uppercase;
+        }
+
+        #particles-js {
+            position: absolute;
+            width: 100%;
+            height: 100vh;
+            z-index: 1;
+        }
+
+        #workshop-tab {
+            position: fixed;
+            top: -470px;
+            /* 325px + 40px + 5px (for safety) */
+            left: 0px;
+            width: 325px;
+            height: auto;
+            background-color: #111;
+            box-shadow: 0px 0px 50px 2px #000;
+            transition: 1s ease;
+            border: 1px solid darkcyan;
+        }
+
+        #cogs:hover #workshop-tab {
+            top: 75px;
+            left: 0px;
+        }
+
+        #workshop-tab p {
+            color: lightgray;
+            font-family: 'Odibee Sans';
+            padding-top: 100px;
+            padding-left: 15px;
+            padding-right: 15px;
+            text-align: center;
+            font-size: 2em;
+            text-transform: capitalize;
+        }
+
+        #card-row-1,
+        #card-row-2 {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #card-1-1,
+        #card-1-2,
+        #card-2-1,
+        #card-2-2 {
+            width: 150px;
+            height: 150px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: #999;
+            text-shadow: 1px 1px 1px #000;
+            background-color: #111;
+            font-size: 3em;
+            box-shadow: 0px 0px 0px 2px #000;
+            margin: 25px;
+            transition: 0.75s ease;
+        }
+
+        #card-row-2 {
+            margin-bottom: 100px;
+        }
+
+        #card-1-1:hover,
+        #card-1-2:hover,
+        #card-2-1:hover,
+        #card-2-2:hover {
+            transform: translateZ(50px);
+            box-shadow: 0px 0px 10px 0px transparent;
+            color: #fff;
+        }
+
+        #card-text {
+            font-size: 0.5em;
+            margin: 30px 0px 0px 0px;
+            font-family: 'Odibee Sans';
+            letter-spacing: 3px;
+            color: #fff;
+        }
+
+        #page-2-hero {
+            font-family: 'Odibee Sans';
+            font-size: 3em;
+            font-weight: 900;
+            text-transform: uppercase;
+            padding: 25px 0px 50px 0px;
+            letter-spacing: 3px;
+            word-spacing: 5px;
+            color: dodgerblue;
+            transition: 1.5s ease;
+        }
+
+        /*#page2:hover */
+        #page-2-hero {
+            text-shadow: 2px 2px 5px #000;
+            transform: translateZ(100px);
+        }
+
+        .fa-angle-double-down,
+        .fa-angle-double-up {
+            color: #000;
+            text-decoration: none;
+            text-decoration-color: #000;
+            position: absolute;
+            top: 90vh;
+            left: 50%;
+            transform: translate(-50%, -0%);
+            font-size: 3em;
+            z-index: 999;
+            transition: 0.75s;
+            animation: arrow 0.5s infinite ease;
+        }
+
+        .fa-angle-double-down:hover,
+        .fa-angle-double-up:hover {
+            transform: scaleY(1.25) translate(-50%, 0%);
+        }
+
+        @keyframes arrow {
+            0% {
+                text-shadow: none;
+            }
+
+            100% {
+                text-shadow: 0px 0px 5px #000;
+            }
+        }
+
+        #vision {
+            position: relative;
+            width: 100%;
+            height: auto;
+            text-align: justify;
+            /*background-image: linear-gradient(-65deg, #d2b4de, #aed6f1);*/
+            background-color: olivedrab;
+            box-shadow: 0 0 50px 0 rgba(0, 0, 0, .75);
+            overflow: hidden;
+        }
+
+        #vision h1,
+        p {
+            color: #000;
+            padding-left: 10%;
+            padding-right: 10%;
+            line-height: 1.5em;
+            font-family: arial;
+        }
+
+        #vision h1 {
+            padding-top: 70px;
+            padding-bottom: 25px;
+            font-size: 3em;
+            font-family: 'Odibee Sans';
+            letter-spacing: 3px
+        }
+
+        #vision p {
+            padding-bottom: 100px;
+            text-overflow: ellipsis;
+        }
+
+        #vision-b {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 10%;
+            background-color: rgba(0, 0, 0, .85);
+            z-index: 99999;
+            box-shadow: inset 0 0 10px rgba(0, 0, 0, .75)
+        }
+
+        #vision-back {
+            cursor: pointer;
+            border: 2px solid #fff;
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-family: arial;
+            font-weight: 600;
+            color: #fff;
+            transition: .5s ease
+        }
+
+        #vision-back:hover {
+            border-color: dodgerblue;
+        }
+
+        #footer {
+            position: absolute;
+            left: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 35%;
+            background-color: rgba(0, 0, 0, .85);
+            box-shadow: inset 0 0 30px #000
+        }
+
+        #footer span {
+            width: 360px;
+            height: auto;
+            display: inline-flex;
+            flex-direction: row;
+            justify-content: space-between;
+            padding-top: 30px
+        }
+
+        #footer span a {
+            width: 40px;
+            height: 40px;
+            border-radius: 25px;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            color: #fff;
+            font-size: 1.4em;
+            cursor: pointer
+        }
+
+        #footer #footer-icons .fa-facebook {
+            background-color: #00f;
+            transition: .35s ease-in-out
+        }
+
+        #footer #footer-icons .fa-instagram {
+            background-image: linear-gradient(45deg, #ff0, 20%, #ff1493, purple);
+            transition: .35s ease-in-out
+        }
+
+        #footer #footer-icons .fa-linkedin {
+            background-color: #0064ff;
+            transition: .35s ease-in-out
+        }
+
+        #footer #footer-icons .fa-facebook:hover {
+            background-color: #fff;
+            color: #00f
+        }
+
+        #footer #footer-icons .fa-instagram:hover {
+            background-image: linear-gradient(white, #fff);
+            color: #dc143c
+        }
+
+        #footer #footer-icons .fa-linkedin:hover {
+            background-color: #fff;
+            color: #0064ff
+        }
+
+        #footer div {
+            width: 100%;
+            height: auto;
+            display: flex;
+            flex-direction: column;
+            color: #fff;
+            padding-left: 15px;
+            padding-top: 20px;
+            padding-bottom: 15px
+        }
+
+        #footer div ul li {
+            list-style: none;
+            padding: 5px;
+            font-size: 1em
+        }
+
+        #footer-content ul li a {
+            text-decoration: none;
+            color: #fff
+        }
+
+        #sponsors-wrap {
+            width: 100%;
+            height: auto;
+            padding-top: 50px;
+            padding-bottom: 50px;
+            background-color: #111;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            box-shadow: inset 0 0 30px rgba(0, 0, 0, .8)
+        }
+
+        #sponsors-wrap h1 {
+            color: #999;
+            font-family: 'Odibee Sans';
+            margin-bottom: 1cm;
+            letter-spacing: 3px
+        }
+
+        #sponsors-tab,
+        #sponsors-tab2 {
+            width: 95%;
+            background-color: rgba(0, 0, 0, .5);
+            display: grid;
+            grid-column-gap: 10px;
+            align-content: space-around;
+            align-items: center;
+            padding: 10px
+        }
+
+        #sponsors-tab {
+            grid-template-columns: 1fr 1fr 1fr
+        }
+
+        #sponsors-tab2 {
+            grid-template-columns: 1fr 1fr
+        }
+
+        #sponsors-tab a,
+        #sponsors-tab div,
+        #sponsors-tab2 a,
+        #sponsors-tab2 div {
+            margin: 10px;
+            height: 250px;
+            background-color: #fff;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: contain;
+            border-radius: 5px
+        }
+
+        #sponsors-tab2 a,
+        #sponsors-tab2 div {
+            background-color: transparent
+        }
+
+        .codeSnail {
+            font-style: italic;
+            text-align: center;
+            font-size: 25px;
+            color: #fff;
+            line-height: 360px;
+            letter-spacing: 2px
+        }
+
+        @media only screen and (max-width:560px) {
+
+            #sponsors-tab,
+            #sponsors-tab2 {
+                display: inline-block;
+                padding: 0
+            }
+
+            #sponsors-tab a,
+            #sponsors-tab div,
+            #sponsors-tab2 a,
+            #sponsors-tab2 div {
+                height: 250px;
+                width: 95%;
+                margin: 10px;
+                display: inline-block
+            }
+        }
+
+        @media only screen and (min-width:650px) and (max-width:1000px) {
+            #sponsors-tab {
+                width: 95%
+            }
+        }
+
+        @media only screen and (min-width:1000px) {
+            #sponsors-tab {
+                width: 95%
+            }
+        }
+
+        #free {
+            position: absolute;
+            left: 0;
+            bottom: 0
+        }
+
+        /*#feeds {
+            position: fixed;
+            top: 0px;
+            left: 0px;
+            height: 100%;
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 999999;
+            transition: 1s ease;
+        }
+
+        .feedContent {
+            border: 3px solid #000; //#142134; //#0d1726;//#191919;//#121e2f;
+            border-radius: 4px;
+            padding: 20px 25px 20px 25px;
+            font-family: 'Odibee Sans';
+            display: inline-flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+            width: 500px;
+            height: auto;
+            background-color: dodgerblue; //#1d3352; //#142134;
+            text-align: center;
+            color: White;
+            box-shadow: 0px 0px 30px 10px #000,
+                inset 0px 2px 50px #000;
+            transition: 1s ease;
+        }
+
+        .feedContent h1 {
+            font-size: 3em;
+            text-transform: capitalize;
+            letter-spacing: 2px;
+            word-spacing: 5px;
+            color: dodgerblue;
+            text-shadow: 2px 3px 4px #000;
+            transform: translateZ(50px);
+        }
+
+        .feedContent h2 {
+            font-size: 2.5em;
+            letter-spacing: 2px;
+            word-spacing: 2px;
+            color: dodgerblue;
+            text-shadow: 2px 3px 4px #000;
+            margin: 10px 0px 10px 0px;
+            transform: translateZ(50px);
+        }
+
+        .feedContent p {
+            font-size: 1.5em;
+            font-family: sans-serif;
+            color: #222;
+            margin-top: 20px;
+            text-shadow: 0px 0px 2px #000;
+        }
+
+        @media only screen and (max-width:500px) {
+            .feedContent {
+                width: 95%;
+            }
+        }
+
+        .feedButtons {
+            width: 100%;
+            background-color: transparent;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            margin: 20px 0px 10px 0px;
+        }
+
+        .feedBtn {
+            background-color: dodgerblue;
+            border: 2px solid #111;
+            border-radius: 7px;
+            padding: 10px 10px 10px 10px;
+            font-size: 1.5em;
+            margin: 15px;
+            width: 175px;
+            color: Black;
+            font-family: 'Odibee Sans';
+            cursor: pointer;
+            transition: 0.5s ease-in-out;
+        }
+
+        .feedBtn:hover {
+            box-shadow: 0px 0px 8px 0px #111;
+            transform: translateZ(50px);
+        }*/
+        
+        #page1-txt-1{
+            transform: translateY(-500px);
+        }
+        #page1-txt-3{
+            transform: scaleX(1.4);
+            opacity: 0;
+        }
+        #page1-txt-4{
+            transform: translateY(200px);
+            opacity: 0;
+        }
+        
+    </style>
+</head>
+
+<body>
+    
+    <div style="width: 100%;height: 100vh;position: fixed;z-index: 9999999999" id="loader-wrapper">
+        <div id="loader"></div>
+    </div>
+
+    <section id="particles-js">
+    </section>
+
+    <span id="workshop-wrap" style="z-index:7000;">
+        <span id="workshop-tab" style="z-index: 7000;">
+            <p>PUBG prelims registrations are now open .<br>
+                go to the prelims section to register for PUBG , CAPTURED , CODE COMBAT & more .</p>
+        </span>
+    </span>
+
+    <nav id="navbar" style="z-index: 9000;">
+        <a class="fa fa-bars" id="bars"></a>
+        <a class="fa fa-close" id="close" style="display: none;"></a>
+        <span class="nav-logo">
+            <img src="css/img/logo.svg">
+        </span>
+        <a class="fa fa-bell-o" id="cogs"></a>
+        <a class="fa fa-close" id="bell-close" style="display: none;"></a>
+    </nav>
+    <section id="content">
+        <div id="menu" style="z-index: 8000;">
+            <span>
+                <a href="index.html">home</a>
+                <a href="eventspage.html">events</a>
+                <a href="TeamInfo.html">about team</a>
+                <a href="portal.html">ca</a>
+                <a href="sponsors.html">sponsors</a>
+                <a href="pre-reg.html">prelims</a>
+                <a href="gallery-page.html">gallery</a>
+            </span>
+        </div>
+        <div id="page1" style="z-index: 2;">
+            <div id="page1-txt">
+                <span id="page1-txt-1" style="display: flex;justify-content: center;align-items: center;">
+                    <h1>AAKRITI</h1>
+                </span>
+                <span id="page1-txt-2" style="display: flex;justify-content: center;align-items: center;">
+                    <h3>TECHFEST&nbsp;&nbsp;&nbsp;&nbsp;2020</h3>
+                </span>
+                <span id="page1-txt-3">
+                    <p>IDEATE</p>
+                    <p>INNOVATE</p>
+                    <p>DEPLOY</p>
+                </span>
+                <span id="page1-txt-4">
+                    <p>Welcome to India's biggest online technical event. Participate, learn and compete with students from across India and win exciting prizes.</p>
+                </span>
+            </div>
+            <a href="#page2" class="fa fa-angle-double-down"></a>
+        </div>
+        <div id="page2" style="z-index: 2;">
+            <h1 id="page-2-hero">click to know more about</h1>
+            <div id="card-row-1">
+               <a style="text-decoration: none;" href="pre-reg.html">
+                <span id="card-1-1" class=" fa fa-code">
+                    <p id="card-text">PRELIMS</p>
+                </span>
+                </a>
+                <a style="text-decoration: none;" href="eventspage.html">
+                <span id="card-1-2" class=" fa fa-calendar">
+                    <p id="card-text">EVENTS</p>
+                </span>
+                </a>
+            </div>
+            <div id="card-row-2">
+               <a style="text-decoration: none;" href="portal.html">
+                <span id="card-2-1" class="fa fa-bookmark-o">
+                    <p id="card-text">CA</p>
+                </span>
+                </a>
+                <a style="text-decoration: none;" href="regForm.html">
+                <span id="card-2-2" class="fa fa-bell-o">
+                    <p id="card-text">PARTICIPATE</p>
+                </span>
+                </a>
+            </div>
+            <!--<div id="card-row-3">
+            <span id="card-3-1" class="cards"></span>
+            <span id="card-3-2" class="cards"></span>
+        </div>
+        <div id="card-row-4">
+            <span id="card-4-1" class="cards"></span>
+            <span id="card-4-2" class="cards"></span>
+        </div>-->
+            <a href="#page3" class="fa fa-angle-double-down" style="top: 190vh"></a>
+        </div>
+
+        <div id="page3">
+            <div id="vision">
+                <h1>ABOUT</h1>
+                <p>AAKRITI is an initiative to applaud the Technical creativity of students across the country.
+                    Being the first of its type, It will surely emerge as the biggest online technical fest of India.
+                    It provides platform to showcase the talent of young aspiring minds. In its first Iteration as AAKRITI’20, the team has combined certain most anticipated technical events associated with computer science and related emerging technologies.<br>
+                    Apart from this we are also trying to collaborate with incubation firms to incubate the ideas of young Enterpreneurs and provide a platform as well as technical and financial support to promising start-ups.
+                </p>
+            </div>
+        </div>
+
+        <div id="sponsors-wrap">
+            <h1>OUR SPONSORS & PARTNERS</h1>
+            <span id="sponsors-tab">
+                <div style="background-image: url(css/img/spn/pic1.png);"></div>
+                <a style="background-image: url(css/img/spn/pic2.jpg);" href="https://www.instagram.com/world_photography.hub/" target="_blank"></a>
+                <div style="background-image: url(css/img/spn/pic3.png);"></div>
+            </span>
+            <span id="sponsors-tab2">
+                <div class="codeSnail" style="background-image: url(css/img/spn/pic4.png);">code_snail</div>
+                <div style="background-image: url(css/img/spn/pic5.jpeg);"></div>
+            </span>
+        </div>
+        <div id=vision-b style="background-color: #111"><span id="vision-back">BACK</span></div>
+        <div id="footer" style="background-color: #111;">
+            <span id="footer-icons">
+                <a class="fa fa-facebook" href="https://www.facebook.com/pg/aakrititechfest/posts/" style="text-decoration: none;"></a>
+                <a class="fa fa-instagram" href="https://instagram.com/aakriti_techfest_?igshid=1rggx7sl7ozbh" style="text-decoration: none;"></a>
+                <a class="fa fa-linkedin" href="https://www.linkedin.com/events/aakrititechfest/" style="text-decoration: none;"></a>
+            </span>
+            <div id="footer-content">
+                <ul>
+                    <li><a href="index.html">🏠 Vibhanshu Jaiswal 2020</a></li>
+                    <li>✉ vibhanshu.18bit1068@abes.ac.in</li>
+                
+                    <li>© Copyrights</li>
+                </ul>
+            </div>
+        </div>
+
+    </section>
+
+    <!--<div id="feeds">
+        <div class="feedContent">
+            <h1>the india's biggest fest is online</h1>
+            <h2>May 1<sup>st</sup> to May 3<sup>rd</sup></h2>
+            <p>Participation portal is online. Grab the opportunity and participate now.</p>
+            <div class="feedButtons">
+                <button class="feedBtn" onclick="location.href='regForm.html'">Click to Participate</button>
+                <button class="feedBtn" onclick="closeFeed()">Close</button>
+            </div>
+        </div>
+    </div>-->
+
+    <script type="text/javascript">
+        var prevScrollPos = window.pageYOffset;
+        document.onscroll = function() {
+            var currScrollPos = window.pageYOffset;
+            if (prevScrollPos > currScrollPos) {
+                document.getElementById("navbar").style.top = "0";
+            } else {
+                document.getElementById("navbar").style.top = "-75px";
+            }
+            prevScrollPos = currScrollPos;
+        }
+    </script>
+
+    <script type="text/javascript">
+        $("#bars").on("click", function() {
+            $("#menu").animate({
+                top: '0px',
+                right: '-65px'
+            }, "fast");
+            $("#bars").css("display", "none");
+            $("#close").css("display", "block");
+        });
+
+        $("#close").on("click", function() {
+            $("#menu").animate({
+                top: '0px',
+                right: '-460px'
+            }, "fast");
+            $("#close").css("display", "none");
+            $("#bars").css("display", "block");
+        });
+    </script>
+
+    <script type="text/javascript">
+        $("#cogs").on("click", function() {
+            $("#workshop-tab").animate({
+                top: '0px',
+                left: '0px'
+            }, "fast");
+            $("#cogs").css("display", "none");
+            $("#bell-close").css("display", "block");
+        });
+
+        $("#bell-close").on("click", function() {
+            $("#workshop-tab").animate({
+                top: '-470px',
+                left: '0px'
+            }, "fast");
+            $("#bell-close").css("display", "none");
+            $("#cogs").css("display", "block");
+        });
+    </script>
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $("#vision-back").click(function() {
+                window.scrollTo(0,0);
+            });
+        });
+    </script>
+    
+    <script type="text/javascript">
+        $(window).on("load",function(){
+            $("#page1-txt-1").css({"transform":"translateY(0px)","transition":"0.75s"});
+            $("#page1-txt-3").css({"transform":"scaleX(1.1)","transition":"1s","opacity":"1"});
+            $("#page1-txt-4").css({"transform":"translateY(0px)","transition":"1.75s","opacity":"1"});
+        })
+    </script>
+
+    <script type="text/javascript" src="js/particles.js"></script>
+
+    <script type="text/javascript" src="js/app.js"></script>
+    
+    <script type="text/javascript">
+        $(window).on("load", function() {
+            $("#loader-wrapper").fadeOut("slow");
+        });
+    </script>
+
+</body></html>
